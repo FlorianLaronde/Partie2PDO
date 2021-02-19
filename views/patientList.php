@@ -3,7 +3,7 @@
         <div class="table-responsive">
             <table class="table table-hover table-dark">
               <thead>
-                  <tr>
+                  <tr > 
                       <th scope="col">#</th>
                       <th scope="col">Nom</th>
                       <th scope="col">Prénom</th>
@@ -15,9 +15,8 @@
               <tbody>
 
                 <?php foreach($patients as $value) { ?>
-
-                  <tr>
-                      <td> <?= $value->id; ?> </td>
+                  <tr style="cursor: zoom-in;" onclick="location.href='/controllers/profil-patientCtrl.php?id=<?= $value->id; ?>'">
+                      <td> <?= $value->id; ?>   </td>
                       <td> <?= $value->lastname; ?> </td>
                       <td> <?= $value->firstname; ?> </td>
                       <td> <?= $value->birthdate; ?> </td>

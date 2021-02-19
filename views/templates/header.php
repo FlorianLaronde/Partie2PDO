@@ -12,6 +12,8 @@
     <!-- MDB -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.2.0/mdb.min.css" rel="stylesheet"/>
 
+    <link rel="stylesheet" href="/assets/css/style.css">
+
     <title>Partie 2 PDO</title>
 </head>
 <body>
@@ -20,5 +22,5 @@
 include(dirname(__FILE__).'/navbar.php');
 ?>
 
-<div class="container my-5"></div>
+<div class="mainContainer container my-5">
 

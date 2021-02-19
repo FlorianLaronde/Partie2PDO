@@ -87,31 +87,32 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Création de l'instance de patient
 
     if(empty($errorsArray)) {
+        
         $patient = new Patient ($name, $firstName, $birthDate, $phone, $mail);
-        var_dump($patient);
-       $testRegister =  $patient->addPatient();
+
+        $testRegister =  $patient->addPatient();
+
        if ($testRegister) {
-           echo 'Données enregistrées';
+        header('location: /controllers/patientListCtrl.php?id=' . $id);
+        
+        echo 'Données enregistrées';
+
+
+
        } else {
             echo 'Données non enregistrées';
+
             $errorsArray ['Bdd_error'] = 'Mauvaises données enregistrées dans la base';
+
             include(dirname(__FILE__).'/../views/templates/header.php');
 
-
             require_once(dirname(__FILE__).'/../views/ajout-patient.php');
-
 
             include(dirname(__FILE__).'/../views/templates/footer.php');
 
        }
     }
 
-
-// var_dump('name : ' . $name); 
-// var_dump('firstName : ' . $firstName);
-// var_dump('birthDate : ' . $birthDate);
-// var_dump('phone : ' . $phone);
-// var_dump('mail : ' . $mail);
 
 }
 

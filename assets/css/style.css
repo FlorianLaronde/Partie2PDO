@@ -1,0 +1,25 @@
+body{
+    background-image: linear-gradient(rgba(109, 109, 153, 0.5), rgba(24, 2, 2, 0.5)),
+                  url("/../assets/img/hospital.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+input, select, textarea{
+    color: black;
+}
+
+textarea:focus, input:focus {
+    color: white;
+}
+
+h1, h2, h3, p {
+    color: white;
+}
+
+.card {
+    background-color: rgba(22, 3, 41, 0.4);
+}
+
